@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* HEADER */
+
+/* header--> */
+.top {
+    display: flex;
+    background-color: rgb(255, 154, 2);
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: "Caveat";
+    height: 10rem;
+    font-size: 2rem;
+
+}
+
+.profileDavid {
+    max-width: 8rem ;
+    height: 8rem;
+    box-shadow: 0rem 0rem 1.0rem 0.2rem #343434;
+}
+
+/* nav */
+
+.nav {
+
+    background-color: #343434;
+    padding: 1rem 0;
+
+    
+}
+.nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    gap: 4rem;
+    
+    
+}
+
+.nav ul li a{
+    text-decoration: none;
+    color: aliceblue;
+    font-family: "Caveat";
+    font-size: 1.5rem;
+}
+
+.nav ul li a:hover {
+    color: yellow;
+}
+
+.nav ul li:hover {
+    transform: scale(1.1);
+}
+
+
+/* MAIN */
+
+.section_1 {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-auto-rows: 1fr auto;
+}
+/* Section 1 */
+
+.about_me {
+    height: 20rem;
+    width: 30rem;
+    margin: 2rem;
+    border-radius: 1.2rem;
+    box-shadow: 0rem 0rem 1rem #343434;
+}
+
+h2 {
+    background-color: #343434;
+    color: #ffffff; 
+    border-radius: 1rem 1rem 0rem 0rem;
+    padding: 1rem;
+
+}
+
+.about_me ul {
+    padding: 2rem 3rem;
+}
+
+/* Section 2 */
+
+.peru_image {
+    display: flex;
+    width: 70%;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+p {
+    text-align: center;
+}
+
+/* Section 3 */
+
+.section_3 {
+    grid-column : 1/3;
+    padding: 2rem;
+}
+
+.contaner {
+    box-shadow: 0rem 0rem 1rem #343434;
+    border-radius: 2rem;
+}
+
+.button_up ul {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    list-style: none;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+.button_up button {
+    font-size: 1.3rem;
+    background-color: #343434;
+    color: white;
+    border-radius: 0.4rem;
+    padding: 0.7rem;
+    width: 10rem;
+}
+
+.button_down ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1f;
+    padding: 2rem;
+    gap: 1rem;
+}
+
+.button_down li {
+    list-style: none;
+}
+
+.button_down button {
+    width: 100%;
+    height: 4rem;
+    font-size: 1.3rem;
+    background-color: #343434;
+    color: white;
+    border-radius: 0.4rem;
+}
+/* FOOTER */
+
+footer {
+    background-color: #343434;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
