@@ -99,3 +99,33 @@ const courses = [
         completed: false
     }
 ]
+
+
+const filterButtons = document.querySelectorAll('.button_up button');
+const courseList = document.querySelector('.button_down');
+
+// Function to render courses
+function renderCourses(filter) {
+    courseList.innerHTML = ''; // Clear current courses
+    const filteredCourses = courses.filter(course => filter === 'all' || course.subject === filter);
+    filteredCourses.forEach(course => {
+        const courseDiv = document.createElement('div');
+        courseDiv.classList.add('course');
+        courseDiv.innerHTML = `
+            <div class="course-title">${course.subject} ${course.number}</div>
+            <div>${course.title}</div>
+        `;
+        courseList.appendChild(courseDiv);
+    });
+}
+
+// Event listeners for filter buttons
+filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const filter = button.dataset.filter;
+        renderCourses(filter);
+    });
+});
+
+// Render all courses initially
+renderCourses('all');
