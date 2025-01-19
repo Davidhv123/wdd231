@@ -18,7 +18,7 @@ last.textContent = `Last Update: ${date.toLocaleDateString("en-US", {
 async function fetchMembers() {
   try {
       // Obtén los datos del archivo JSON
-      const response = await fetch('/data/members.json');
+      const response = await fetch('../data/members.json');
       const members = await response.json();
 
       // Contenedor de tarjetas
