@@ -15,9 +15,13 @@
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Epunda+Sans:ital,wght@0,300..900;1,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <!-- Font 2 -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="styles/profile.css">
 
     <script src="scripts/profile.js" defer></script>
@@ -26,60 +30,66 @@
 <body>
     <header>
         <div class="top">
-            <img class="profileDavid" src="images/profileDavid.webp" alt="Profile">
-            <h1>David M.Huaroto</h1>
+            <img class="logoInterface" src="images/logo1.svg" alt="logo1">
+            <span class="myName">Interface</span>
             <div class="mobile-menu">
-                <img src="images/mobile_menu.webp" alt="mobile-menu">
+                <img src="images/menu.svg" alt="mobile-menu">
             </div>
         </div>
-        <div class="nav">
+        <nav class="nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#">Chamber</a></li>
-                <li><a href="#">Github Profile</a></li>
-                <li><a href="https://www.linkedin.com/in/david-martin-huaroto-villavicencio-89036b2a0/">LinkedIn</a></li>
+                <li><a href="#">Chamber Project</a></li>
+                <li><a href="#">Final Project</a></li>
             </ul>
-        </div>
+        </nav>
     </header>
-    <main class="section_1">
+    <main>
+        <!-- PARTE  .....................1 -->
+        <h1>Home</h1>
+
+
+        <!-- PARTE  .....................2 -->
         <section class="about_me">
             <h2>Course work</h2>
-            <ul>
-                <li>Develoment in HTML</li>
-                <li>Developer in CSS</li>
-                <li>Developer in JavaScript</li>
-            </ul>
+            <h3>Hello there, I'm David from Peru, and I'm 25 years old. Currently, I’m studying Software Development online at BYU-Idaho. I’ve also been working at Teleperformance for one year as a Customer Service Representative in the PDP (Prescription Drug Plan) department. In this role, I talk with members, pharmacies, and providers to help ensure that our members receive their medications as quickly as possible. I’m someone who loves learning and improving every day, and that’s why my favorite scripture in D&C is the following one.<br>DyC 93:36  </h3>
         </section>
+
+
+        <!-- PARTE  .....................3 -->
+
         <section class="about_me">
-            <h2>Lima, Peru</h2>
-            <img class="peru_image" src="images/Peru-Lima.webp" alt="Image of Lima, Peru">
-            <p>Miraflores</p>
+            <h2>Student Photo</h2>
+            <img class="myPhoto" src="images/profileDavid.webp" alt="Image of Lima, Peru">
         </section>
+
+
+        <!-- PARTE  .....................4 -->
         <section class="section_3">
             <div class="contaner">
-                <h2>Web and Computer Programing Certificate</h2>
+                <h2>Web Certificate Courses</h2>
             <div class="button_up">
                 <ul>
-                    <li><button>All</button></li>
-                    <li><button>CSE</button></li>
-                    <li><button>WDD</button></li>
+                    <li><button onclick="showCourses('All')">All</button></li>
+                    <li><button onclick="showCourses('CSE')">CSE</button></li>
+                    <li><button onclick="showCourses('WDD')">WDD</button></li>
                 </ul>
             </div>
             <hr>
-            <div class="button_down">
-                <ul class="ul">
-                    <li><p>CSE 110</p></li>
-                    <li><p>WDD 130</p></li>
-                    <li><p>CSE 111</p></li>
-                    <li><p>CSE 210</p></li>
-                    <li><p>WDD 131</p></li>
-                    <li><p>WDD 231</p></li>
-                </ul>
+            <div class="courses">
+                <div class="course CSE">CSE 110</div>
+                <div class="course WDD">WDD 130</div>
+                <div class="course CSE">CSE 111</div>
+                <div class="course CSE">CSE 210</div>
+                <div class="course WDD">WDD 131</div>
+                <div class="course WDD">WDD 231</div>
             </div>
         </section>
     </main>
     <footer>
-        <p>©️2025 🤖David Martin Huaroto Villavicencio🤖</p>
+        <!-- <li><a href="https://www.linkedin.com/in/david-martin-huaroto-villavicencio-89036b2a0/">LinkedIn</a></li> -->
+        <!-- aqui tiene que ir los links de likeding, git hub, 1 o 2 mas de lo que se me venga en gana (con iconos que redirigan alos)-->
+        <p>©️2025 🤖David Martin Huaroto Villavicencio🤖 Lima, Peru</p>
         <span id="currentyear"></span>
     </footer>
 

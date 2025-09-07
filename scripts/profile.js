@@ -1,3 +1,4 @@
+//FOOTER control date 
 const date = new Date();
 
 const last = document.getElementById("currentyear");
@@ -101,31 +102,21 @@ const courses = [
 ]
 
 
-const filterButtons = document.querySelectorAll('.button_up button');
-const courseList = document.querySelector('.button_down');
 
-// Function to render courses
-function renderCourses(filter) {
-    courseList.innerHTML = ''; // Clear current courses
-    const filteredCourses = courses.filter(course => filter === 'all' || course.subject === filter);
-    filteredCourses.forEach(course => {
-        const courseDiv = document.createElement('div');
-        courseDiv.classList.add('course');
-        courseDiv.innerHTML = `
-            <div class="course-title">${course.subject} ${course.number}</div>
-            <div>${course.title}</div>
-        `;
-        courseList.appendChild(courseDiv);
-    });
+
+// ocultar cursos 
+
+function showCourses(category) {
+  const courses = document.querySelectorAll('.course');
+  courses.forEach(course => {
+    if (category === 'All') {
+      course.style.display = 'block';
+    } else {
+      if (course.classList.contains(category)) {
+        course.style.display = 'block';
+      } else {
+        course.style.display = 'none';
+      }
+    }
+  });
 }
-
-// Event listeners for filter buttons
-filterButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const filter = button.dataset.filter;
-        renderCourses(filter);
-    });
-});
-
-// Render all courses initially
-renderCourses('all');

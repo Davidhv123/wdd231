@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
 }
 
 /* HEADER */
@@ -11,17 +12,22 @@
     display: flex;
     background-color: rgb(255, 154, 2);
     align-items: center;
-    justify-content: space-evenly;
-    font-family: "Caveat";
-    height: 10rem;
+    justify-content: start;
+    height: 6rem;
     font-size: 2rem;
 
 }
 
-.profileDavid {
-    max-width: 8rem;
-    height: 8rem;
-    box-shadow: 0rem 0rem 1.0rem 0.2rem #343434;
+
+
+.myName {
+    padding: 0rem 1rem;
+    font-size: 3rem;
+}
+
+.logoInterface {
+    padding: 0rem 1rem 0rem 2rem;
+    height: 4rem;
 }
 
 /* nav */
@@ -29,49 +35,63 @@
 .nav ul {
     display: flex;
     list-style: none;
-    gap: 4rem;
     background-color: #343434;
-    padding: 1rem;
-    visibility: visible;
-    opacity: 1;
-    justify-content: space-evenly;
-    flex-direction: row;
+    /* padding: 0.5rem; */
+    /* visibility: visible; */
+    /* opacity: 1; */
+    justify-content: start;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    line-height: 1.5;     
+
+
+    /* flex-direction: row; */
 
 
 }
 
 .nav ul li a {
+    display: inline-block;
+    padding: 0.5rem 2rem;
     text-decoration: none;
     color: aliceblue;
-    font-family: "Caveat";
+    /* font-family: "Caveat"; */
     font-size: 1.5rem;
 }
 
 .nav ul li a:hover {
-    color: yellow;
+    color: rgb(255, 154, 2);
+    background-color: rgb(69, 69, 69);
+
 }
 
-.nav ul li:hover {
-    transform: scale(1.1);
-}
 
 
 /* MAIN */
 
-.section_1 {
+main {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: auto auto auto;
 }
 
 /* Section 1 */
 
+h1 {
+    grid-column: 1/ span 2;
+    padding: 1rem 2rem;
+}
+
+/* Section 2 */
+
 .about_me {
-    margin: 2rem;
+    margin: 0rem 2rem;
     border-radius: 1.2rem;
     box-shadow: 0rem 0rem 1rem #343434;
 }
 
 h2 {
+    text-align: center;
     background-color: #343434;
     color: #ffffff;
     border-radius: 1rem 1rem 0rem 0rem;
@@ -79,27 +99,36 @@ h2 {
 
 }
 
+h3 {
+    text-align: start;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 450;
+    padding: 1.5rem;
+    font-style: normal;
+
+
+}
+
 .about_me ul {
     padding: 2rem 3rem;
 }
 
-/* Section 2 */
+/* Section 3 */
 
-.peru_image {
+.myPhoto {
     display: flex;
-    width: 70%;
-    padding: 1rem;
+    width: 15rem;
+    border-radius: 2rem;
+    padding: 1.5rem;
     margin: 0 auto;
 }
 
-p {
-    text-align: center;
-}
+/* Section 4 */
 
-/* Section 3 */
-
+/* part 1 */
 .section_3 {
-    grid-column: 1/3;
+    grid-column: 1/ span 2;
     padding: 2rem;
 }
 
@@ -112,22 +141,24 @@ p {
     text-align: center;
 }
 
+/* part 2 */
+
 .button_up ul {
     display: flex;
     flex-direction: row;
-    gap: 0.5rem;
+    gap: 1.5rem;
     list-style: none;
     justify-content: center;
     padding: 1rem 0;
 }
 
 .button_up button {
-    font-size: 1.0rem;
+    font-size: 1rem;
     background-color: black;
     color: white;
     border-radius: 0.4rem;
     padding: 0.4rem;
-    width: 8rem;
+    width: 17rem; 
 }
 
 .button_down ul {
@@ -137,19 +168,32 @@ p {
     gap: 1rem;
 }
 
-.button_down li {
-    list-style: none;
-}
+/* part 3 ------------------------------------------------------------------------------------*/
 
-.button_down p {
-    width: 100%;
-    height: 4rem;
+.courses {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); 
+      justify-items: center;
+    }
+
+
+.courses div {
+    margin: 0.5rem 0rem;
+    text-align: center;
+    width: 80%;
+    padding: 1rem;
     font-size: 1.3rem;
     background-color: #343434;
     color: white;
     border-radius: 0.4rem;
 }
 
+.course {
+  background: #ccc;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  text-align: center;
+}
 /* FOOTER */
 
 footer {
@@ -169,15 +213,17 @@ footer {
 /* media query */
 
 @media (max-width:768px) {
+    /* header */
     .top {
-        justify-content: center;
+        justify-content: space-evenly;
 
         img {
-            margin-left: 2rem;
+            padding: 0rem;
         }
 
-        h1 {
-            margin-left: 2rem;
+        span {
+            margin-left: 0rem;
+            font-size: 1.5rem;
         }
     }
 
@@ -194,29 +240,64 @@ footer {
         padding: 2rem;
     }
 
-    .section_1 {
-        grid-template-columns: 1fr;
-    }
+    /* MAIN */
+
+    main {
+    display: flex;
+    flex-direction: column;
+}
+
+    .about_me {
+    margin: 0rem 2rem 2rem 2rem;
+}
+
 
     .section_3 {
         grid-column: 1/2;
-    }
+    } */
+
+
+    /* SECION 3 */
 
     .button_down .ul {
-        display: block;
+        display: flex;
     }
 
     .button_down li {
-        margin: 1rem 0;
+        margin: 2rem 0;
     }
 
-    .mobile-menu {
+    /* secion 4 */
+    .button_up button {
+    width: 4.5rem; 
+    }
+
+    .button_up ul {
+    gap: 0.5rem;
+}
+    /*Section 4.(courses)  */
+.courses {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+
+.courses div {
+    margin: 0.5rem 0rem;
+    width: 14rem;
+    padding: 1rem;
+    font-size: 1.3rem;
+}
+
+.mobile-menu {
         visibility: visible;
 
         img {
             height: 5rem;
             box-shadow: none;
             cursor: pointer;
+            width: 3rem;
         }
     }
 
@@ -224,5 +305,9 @@ footer {
         visibility: visible;
         opacity: 1;
         height: auto;
+        text-align: center;
+        
     }
 }
+
+    
