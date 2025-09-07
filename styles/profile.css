@@ -129,7 +129,7 @@ h3 {
 /* part 1 */
 .section_3 {
     grid-column: 1/ span 2;
-    padding: 2rem;
+    padding: 2rem 2rem 1rem 2rem;
 }
 
 .contaner {
@@ -196,11 +196,33 @@ h3 {
 }
 /* FOOTER */
 
-footer {
+.base {
     background-color: #343434;
     color: white;
     text-align: center;
     padding: 1rem;
+}
+
+.social-icons  {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+
+.social-icons img {
+    width: 3rem;
+    height: 5rem;
+    /* padding: 0rem 0rem 1rem 0rem; */
+    margin: 0rem 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+
+    
+}
+
+.social-icons img:hover {
+  transform: scale(1.1); 
 }
 
 /* ************************************ */
