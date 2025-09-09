@@ -175,6 +175,8 @@ h3 {
 }
 
 #total-credits {
+    height: 2rem;
+    margin: 1rem;
     text-align: center;
 }
 
@@ -371,6 +373,12 @@ h3 {
         text-align: center;
         
     }
+
+    #total-credits {
+        height: 3rem;
+    }
+
+        
 }
 
     
