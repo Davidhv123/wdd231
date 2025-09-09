@@ -32,6 +32,12 @@
 
 /* nav */
 
+.nav a.active {
+  color: rgb(255, 154, 2);
+  font-weight: bold;
+  border-bottom: 2px solid rgb(255, 154, 2);
+}
+
 .nav ul {
     display: flex;
     list-style: none;
@@ -45,7 +51,7 @@
     line-height: 1.5;     
 
 
-    /* flex-direction: row; */
+    
 
 
 }
@@ -168,6 +174,10 @@ h3 {
     gap: 1rem;
 }
 
+#total-credits {
+    text-align: center;
+}
+
 /* part 3 ------------------------------------------------------------------------------------*/
 
 .courses {
@@ -194,6 +204,37 @@ h3 {
   margin: 0.5rem 0;
   text-align: center;
 }
+
+.course.completed {
+  background-color: #343434; 
+  border-left: 5px solid rgb(255, 154, 2);
+  font-weight: bold;
+  position: relative;
+
+}
+.course.completed::after {
+  content: "✓ Completed";
+  color: green;
+  font-size: 0.8rem;
+  margin-left: 10px;
+}
+
+
+
+/* part 4--- */
+
+.second-line {
+  display: flex;
+  justify-content: center; 
+}
+
+.second-line hr {
+  width: 87%;            
+  border: none;
+  height: 1px;
+  background-color: #828282; 
+}
+
 /* FOOTER */
 
 .base {

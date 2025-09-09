@@ -34,7 +34,7 @@
         </div>
         <nav class="nav">
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="index.html">Home</a></li>
                 <li><a href="#">Chamber Project</a></li>
                 <li><a href="#">Final Project</a></li>
             </ul>
@@ -66,20 +66,24 @@
                 <h2>Web Certificate Courses</h2>
             <div class="button_up">
                 <ul>
-                    <li><button onclick="showCourses('All')">All</button></li>
-                    <li><button onclick="showCourses('CSE')">CSE</button></li>
-                    <li><button onclick="showCourses('WDD')">WDD</button></li>
+                    <li><button onclick="showCourses('all')">All</button></li>
+                    <li><button onclick="showCourses('cse')">CSE</button></li>
+                    <li><button onclick="showCourses('wdd')">WDD</button></li>
                 </ul>
             </div>
             <hr>
             <div class="courses">
-                <div class="course CSE">CSE 110</div>
-                <div class="course WDD">WDD 130</div>
-                <div class="course CSE">CSE 111</div>
-                <div class="course CSE">CSE 210</div>
-                <div class="course WDD">WDD 131</div>
-                <div class="course WDD">WDD 231</div>
+                <div class="course cse completed" data-credits="2" >CSE 110</div>
+                <div class="course wdd completed" data-credits="2" >WDD 130</div>
+                <div class="course cse completed" data-credits="2" >CSE 111</div>
+                <div class="course cse" data-credits="2" >CSE 210</div>
+                <div class="course wdd completed" data-credits="2" >WDD 131</div>
+                <div class="course wdd" data-credits="2" >WDD 231</div>
             </div>
+            <div class="second-line">
+                <hr>
+            </div>
+            <p id="total-credits">The total is 0</p>
         </section>
     </main>
     <footer>
@@ -95,8 +99,11 @@
             </a>
         </div>
         <div class="base">
-            <p>©️2025 🤖David Martin Huaroto Villavicencio🤖 Lima, Peru</p>
-            <span id="currentyear"></span>
+            <p>
+                &copy; <span id="currentyear"></span> 🤖 David Huaroto 🤖Lima, Peru
+            </p>
+            <p id="lastModified"></p>
+
         </div>
         
     </footer>

@@ -1,17 +1,11 @@
 //FOOTER control date 
-const date = new Date();
 
-const last = document.getElementById("currentyear");
-last.textContent = `Last Update: ${date.toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-})} ${date.toLocaleTimeString("en-US", {
-    hour: "2-digit",
-    minute: "2-digit",
-    second: "2-digit",
-})}`;
+document.getElementById("currentyear").textContent = new Date().getFullYear();
 
+document.getElementById("lastModified").textContent =
+  "Last Modified: " + document.lastModified;
+
+// icon hamburger
 
 const mobile = document.querySelector(".mobile-menu")
 mobile.addEventListener('click', function () {
@@ -108,15 +102,28 @@ const courses = [
 
 function showCourses(category) {
   const courses = document.querySelectorAll('.course');
+  let visibleCourses = [];
+
   courses.forEach(course => {
-    if (category === 'All') {
+    if (category === 'all') {
       course.style.display = 'block';
+      visibleCourses.push(course);
+    } else if (course.classList.contains(category.toLowerCase())) {
+      course.style.display = 'block';
+      visibleCourses.push(course);
     } else {
-      if (course.classList.contains(category)) {
-        course.style.display = 'block';
-      } else {
-        course.style.display = 'none';
-      }
+      course.style.display = 'none';
     }
   });
+
+  
+  const totalCredits = visibleCourses.reduce((sum, course) => {
+    return sum + parseInt(course.dataset.credits);
+  }, 0);
+
+  document.getElementById('total-credits').textContent =
+    `The total credits for course listed above is ${totalCredits}`;
 }
+
+
+
