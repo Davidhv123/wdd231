@@ -116,13 +116,23 @@ function showCourses(category) {
     }
   });
 
-  
+  // Total créditos de los cursos visibles
   const totalCredits = visibleCourses.reduce((sum, course) => {
     return sum + parseInt(course.dataset.credits);
   }, 0);
 
+  // Créditos completados de los visibles
+  const completedCredits = visibleCourses
+    .filter(course => course.classList.contains('completed'))
+    .reduce((sum, course) => {
+      return sum + parseInt(course.dataset.credits);
+    }, 0);
+
   document.getElementById('total-credits').textContent =
-    `The total credits for course listed above is ${totalCredits}`;
+    `The total credits for the courses listed above is ${totalCredits}.`;
+
+  document.getElementById('completed-credits').textContent =
+    `I have completed ${completedCredits} credits so far.`;
 }
 
 
