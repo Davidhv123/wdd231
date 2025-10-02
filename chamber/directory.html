@@ -8,20 +8,22 @@
     <meta name="author" content="David Martin Huaroto Villavicencio">
     <title>Chamber Directory</title>
 
-    <!-- Etiquetas de Open Graph corregir -->
-    <meta property="og:title" content="Interface.Peru">
+    <!-- Etiquetas de Open Graph corregir for facebook -->
+    <meta property="og:title" content="Chamber comerce Lima">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="#">
+    <meta property="og:image" content="images/Interface.webp">
     <meta property="og:url" content="https://davidhv123.github.io/wdd231/chamber/directory.html">
-    <meta property="og:description" content="holiwiisdjfijsidjfisjidfj">
+    <meta property="og:description"
+        content="Discover the best E-Comerce to get your own computer or laptop more affordable">
 
     <!-- font Monserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="styles/directory.css">
     <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/directory.css">
+
     <link rel="icon" href="images/logointerface.ico">
 
     <script src="scripts/directory.js" defer></script>
@@ -30,91 +32,98 @@
 
 <body>
     <header class="header">
-        <div class="container-logo">
-            <div>
-                <img src="images/logo1.webp" alt="Logo Interface">
+        <div class="topbar">
+            <img src="images/logo1.svg" alt="Logo" class="logo">
+            <h1 class="title">
+                <span class="big">LIMA <br></span>
+                <span class="small">Chamber of Commerce</span>
+            </h1>
+            <!-- botton nigth mode -->
+            <div class="menu-btn">
+                <img src="images/menu.svg" alt="Menu">
             </div>
-            <h1>Interface Peru <br></h1>
         </div>
-
-        <nav class="nav">
-            <a href="">Home</a>
-            <a href="">Directory</a>
-            <a href="">Join</a>
-            <a href="">Discover</a>
-        </nav>
-    </header>
-    <main class="main">
-        <section class="main-imagen">
-            <div class="img_banner">
-                <button>Keynote Tickets</button>
-            </div>
-            
-        </section>
-
-
-        <h2>Home</h2>
-        <section class="sections-container">
-            <div class="card">
-                <header>
-                    <h3>Events</h3>
-                </header>
-                <main>
-                    ...
-                </main>
-            </div>
-            <div class="card">
-                <header>
-                    <h3>Current Weather</h3>
-                </header>
-                <main>
-                    <img src="" alt="icon-weather">
-                    <p>75º F</p>
-                    <p>Party Cloudy</p>
-                    <p>High: 85º</p>
-                    <p>Low: 52º</p>
-                    <p>Humidity: 34%</p>
-                    <p>sunrise: 7:30am</p>
-                    <p>sunset: 9:59pm</p>
-                </main>
-            </div>
-            <div class="card">
-                <header>
-                    <h3>Weather Forecast</h3>
-                </header>
-                <main>
-                    <p>Today: <span>90ºF</span></p>
-                    <p>Wednesday: <span>89ºF</span></p>
-                    <p>Thursday: <span>68ºF</span></p>
-                </main>
-            </div>
-        </section>
         
 
-        <div id="members" class="sections-down"></div>
+        <nav class="nav hidden">
+            <ul>
+                <li><a href="directory.html">Home</a></li>
+                <li><a href="#">Directory</a></li>
+                <li><a href="#">Join</a></li>
+                <li><a href="#">Discover</a></li>
+            </ul>
+        </nav>
+
+        <div class="dark-toggle">
+            <img src="images/modo-nocturno.svg" alt="dark mode">
+        </div>
+    </header>
+
+
+    <main>
+        <!-- Hero -->
+        <section class="hero">
+            <img src="images/Hero_Interface.webp" alt="Hero image">
+            <button class="cta">Keynote Tickets</button>
+        </section>
+
+        <!-- Home Content -->
+        <h1>Home</h1>
+        <section class="info-grid">
+            <div class="card">
+                <h2 class="card-title">Events</h2>
+            </div>
+
+            <div class="card">
+                <h2 class="card-title">Current Weather</h2>
+                <p>75°F, Partly Cloudy</p>
+                <p>High: 85° | Low: 52°</p>
+                <p>Humidity: 34%</p>
+            </div>
+
+            <div class="card">
+                <h2 class="card-title">Weather Forecast</h2>
+                <p>Today: <strong>90°F</strong></p>
+                <p>Wednesday: <strong>89°F</strong></p>
+                <p>Thursday: <strong>68°F</strong></p>
+            </div>
+        </section>
+
+        <!-- Business Cards -->
+        <section class="business-grid">
+            <article class="business">
+                <h3>Business Name</h3>
+                <p>Business Tag Line</p>
+                <p><strong>Email:</strong> info@gmail.com</p>
+                <p><strong>Phone:</strong> 800-555-1234</p>
+                <p><strong>URL:</strong> mybusiness.com</p>
+            </article>
+            <article class="business">
+                <h3>Business Name</h3>
+                <p>Business Tag Line</p>
+                <p><strong>Email:</strong> info@gmail.com</p>
+                <p><strong>Phone:</strong> 800-555-1234</p>
+                <p><strong>URL:</strong> mybusiness.com</p>
+            </article>
+        </section>
     </main>
 
-    <footer class="footer">
-        <div class="container-footer">
-            <div class="bloque1">
-                <span>Interface Chamber of Commerce</span>
-                <p>Av. Molina</p>
-                <p>Timbuktu, Mali 999</p>
-                <p>Interface_oficial@gmail.com</p>
-                <p>+51 902 908 984</p>
-            </div>
-            <div class="bloque2">
-                <a href="#">YouTube</a>
-                <a href="#">Twitter</a>
-                <a href="#">LinkedIn</a>
-            </div>
-            <div class="bloque3">
-                <p>WDD231 Class Project</p>
-                <p>David Martin Huaroto Villavicencio</p>
-                <span id="current_date"></span>
-            </div>
+    <footer>
+        <div>
+            <p><strong>Timbuktu Chamber of Commerce</strong></p>
+            <p>10 Rue De La Paix, Timbuktu, Mali 999</p>
+            <p>Email: info@timbuktucc.org</p>
+            <p>Phone: (223) 555-2300</p>
         </div>
+        <div class="social">
+            <a href="#">YouTube</a>
+            <a href="#">Twitter</a>
+            <a href="#">LinkedIn</a>
+        </div>
+        <p>© 20xx Timbuktu Chamber of Commerce | WDD231 Project</p>
     </footer>
+
+    <script src="scripts/menu.js" defer></script>
 </body>
 
 </html>
