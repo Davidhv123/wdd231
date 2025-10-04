@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Timbuktu / Lima Chamber — Pixel-perfect replica</title>
+    <meta name="description" content="Pixel-tuned replica — palette naranja + #343434" />
+    <meta name="author" content="David Martin Huaroto Villavicencio">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Chamber commerce Lima">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/Interface.webp">
+    <meta property="og:url" content="https://davidhv123.github.io/wdd231/chamber/directory.html">
+    <meta property="og:description"
+        content="Discover the best E-Comerce to get your own computer or laptop more affordable">
+
+    <!-- font Monserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+
+    <link rel="icon" href="images/logointerface.ico">
+
+    <script src="scripts/directory.js" defer></script>
+
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="site-header" role="banner">
+        <div class="header-inner">
+            <div class="brand" aria-label="Brand">
+                <div><img src="images/logo1.svg" alt="Logo" class="logo"></div>
+                <div class="brand-text">
+                    <div class="brand-name">Lima Chamber of Commerce</div>
+                    <div class="brand-sub">Connecting local business</div>
+                </div>
+            </div>
+
+            <!-- NAV (right-aligned) -->
+            <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+                <ul class="links" id="navLinks">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#">Directory</a></li>
+                    <li><a href="#">Join</a></li>
+                    <li><a href="#">Discover</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions" role="toolbar" aria-label="Header actions">
+                <button id="darkToggle" class="icon-btn" aria-pressed="false" title="Toggle dark mode">🌙</button>
+                <button id="hamburger" class="hamburger" aria-label="Open menu" aria-expanded="false"
+                    aria-controls="navLinks">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="home" aria-label="Hero">
+        <img src="images/img_hero.webp" alt="Hero placeholder — networking event" loading="lazy" width="1600"
+            height="800">
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="hero-content" role="region" aria-label="Hero content">
+            <h1>Stronger together — Lima Chamber</h1>
+            <p class="lead">Conectamos empresas locales con recursos, oportunidades y eventos que impulsan el
+                crecimiento.</p>
+        </div>
+        <a class="cta-right" href="#join" role="button" aria-label="Join the chamber">Join the Chamber</a>
+    </section>
+
+    <!-- MAIN -->
+    <main>
+        <div class="grid-row">
+            <!-- EVENTS -->
+            <article class="card events" id="events" aria-labelledby="eventsTitle">
+                <h2 id="eventsTitle">Current Events</h2>
+                <ul class="events-list" aria-live="polite">
+                    <li class="ev-item">
+                        <div class="ev-date">Oct 12</div>
+                        <div class="ev-desc"><strong>Networking Breakfast</strong>
+                            <div class="small muted">Main Hall • 08:00</div>
+                        </div>
+                    </li>
+                    <li class="ev-item">
+                        <div class="ev-date">Oct 20</div>
+                        <div class="ev-desc"><strong>Small Biz Workshop</strong>
+                            <div class="small muted">Room 4 • 14:00</div>
+                        </div>
+                    </li>
+                    <li class="ev-item">
+                        <div class="ev-date">Nov 01</div>
+                        <div class="ev-desc"><strong>Annual Gala</strong>
+                            <div class="small muted">Grand Ballroom • 19:00</div>
+                        </div>
+                    </li>
+                </ul>
+            </article>
+
+            <!-- WEATHER -->
+            <div class="weather-container">
+                <!-- Cuadro 1: Current Weather -->
+                <aside class="card weather" id="weatherNowCard" aria-labelledby="weatherTitle">
+                    <h2 id="weatherTitle">Current Weather</h2>
+                    <div id="weatherNow" class="weather-widget" role="status" aria-live="polite">
+                        <div class="weather-now">
+                            <div class="temp">—</div>
+                            <div class="meta">Cargando clima…</div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+
+            <!-- Cuadro 2: Forecast -->
+            <aside class="card forecast-card" id="forecastCard" aria-labelledby="forecastTitle">
+                <h2 id="forecastTitle">3-Day Forecast</h2>
+                <div id="forecastList" class="forecast" aria-live="polite"></div>
+            </aside>
+
+        </div>
+    </main>
+
+    <!-- SPOTLIGHTS -->
+    <div id="spotlightContainer" class="spot-grid"></div>
+
+    <!-- COMPANIES -->
+    <section id="companies" class="companies-section">
+        <h2>Our Partners</h2>
+        <div id="companyList" class="company-list"></div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-inner">
+            <div>
+                <strong>Lima Chamber of Commerce</strong>
+                <div class="muted">Av. Principal 123 • Lima, Perú</div>
+                <div class="muted">info@limacommerce.org</div>
+                <div class="muted">(902 908 915)</div>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/david-martin-huaroto-villavicencio-89036b2a0" target="_blank">
+                    <img src="images/linkedin.svg" alt="linkedin">
+                </a>
+                <a href="https://github.com/Davidhv123/wdd231" target="_blank">
+                    <img src="images/github.svg" alt="GitHub">
+                </a>
+                <a href="https://www.instagram.com/david_huaroto_villavicencio" target="_blank">
+                    <img src="images/instagram.svg" alt="instagram">
+                </a>
+            </div>
+            <div>
+                <div class="muted">WDD321 Class Project</div>
+                <div class="muted">David Huaroto</div>
+                <div class="muted">&copy; 2025 Lima Chamber of Commerce</div>
+                <div class="muted">WDD231 — Last update: <span id="lastMod"></span></div>
+            </div>
+
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>
