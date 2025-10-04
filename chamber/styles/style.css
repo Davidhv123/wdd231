@@ -676,7 +676,7 @@ hr {
     right: 12px;
     top: 76px;
     display: none;
-    background: var(--card);
+    background: #343434;
     padding: 12px;
     border-radius: 10px;
     box-shadow: 0 12px 30px rgba(16, 24, 40, 0.4);
