@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Thank You — Lima Chamber</title>
+  <meta name="description" content="Formulario de membresía enviado con éxito">
+  <meta name="author" content="David Martin Huaroto Villavicencio">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Lima Chamber of Commerce - Thank You">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/Interface.webp">
+  <meta property="og:url" content="https://davidhv123.github.io/wdd231/chamber/thankyou.html">
+  <meta property="og:description" content="Gracias por unirte a la Cámara de Comercio de Lima.">
+
+  <!-- Fuente y estilos -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/join.css">
+  <link rel="icon" href="images/logointerface.ico">
+
+  <script src="scripts/directory.js" defer></script>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <div class="brand" aria-label="Brand">
+        <div><img src="images/logo1.svg" alt="Logo" class="logo"></div>
+        <div class="brand-text">
+          <div class="brand-name">Lima Chamber of Commerce</div>
+          <div class="brand-sub">Connecting local business</div>
+        </div>
+      </div>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <ul class="links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+          <li><a href="discover.html">Discover</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions" role="toolbar" aria-label="Header actions">
+        <button id="darkToggle" class="icon-btn" aria-pressed="false" title="Toggle dark mode">🌙</button>
+        <button id="hamburger" class="hamburger" aria-label="Open menu" aria-expanded="false"
+          aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="thankyou-main">
+    <div class="thankyou-card">
+      <img src="images/checked.svg" alt="check" class="thankyou-icon" />
+      <h1>Thank You for Joining!</h1>
+      <p>We’ve received your membership application successfully.</p>
+      <p>Our team will contact you soon with more details.</p>
+      <a href="index.html" class="thankyou-btn">Back to Home</a>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div>
+        <strong>Lima Chamber of Commerce</strong>
+        <div class="muted">Av. Principal 123 • Lima, Perú</div>
+        <div class="muted">info@limacommerce.org</div>
+        <div class="muted">(902 908 915)</div>
+      </div>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/david-martin-huaroto-villavicencio-89036b2a0" target="_blank">
+          <img src="images/linkedin.svg" alt="linkedin">
+        </a>
+        <a href="https://github.com/Davidhv123/wdd231" target="_blank">
+          <img src="images/github.svg" alt="GitHub">
+        </a>
+        <a href="https://www.instagram.com/david_huaroto_villavicencio" target="_blank">
+          <img src="images/instagram.svg" alt="instagram">
+        </a>
+      </div>
+      <div>
+        <div class="muted">WDD321 Class Project</div>
+        <div class="muted">David Huaroto</div>
+        <div class="muted">&copy; 2025 Lima Chamber of Commerce</div>
+        <div class="muted">WDD231 — Last update: <span id="lastMod"></span></div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

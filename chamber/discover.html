@@ -26,7 +26,7 @@
 
     <link rel="icon" href="images/logointerface.ico">
 
-    <script src="scripts/script.js" defer></script>
+    <script src="scripts/directory.js" defer></script>
 
 </head>
 
@@ -62,78 +62,14 @@
         </div>
     </header>
 
-    <!-- HERO -->
-    <section class="hero" id="home" aria-label="Hero">
-        <img src="images/img_hero.webp" alt="Hero placeholder — networking event" loading="lazy" width="1600"
-            height="800">
-        <div class="hero-overlay" aria-hidden="true"></div>
-        <div class="hero-content" role="region" aria-label="Hero content">
-            <h1>Lima Chamber</h1>
-            <p class="lead">Conectamos empresas locales con recursos, oportunidades y eventos que impulsan el
-                crecimiento.</p>
-        </div>
-        <a class="cta-right" href="#join" role="button" aria-label="Join the chamber">Join the Chamber</a>
-    </section>
+
 
     <!-- MAIN -->
     <main>
-        <div class="grid-row">
-            <!-- EVENTS -->
-            <article class="card events" id="events" aria-labelledby="eventsTitle">
-                <h2 id="eventsTitle">Current Events</h2>
-                <ul class="events-list" aria-live="polite">
-                    <li class="ev-item">
-                        <div class="ev-date">Oct 12</div>
-                        <div class="ev-desc"><strong>Networking Breakfast</strong>
-                            <div class="small muted">Main Hall • 08:00</div>
-                        </div>
-                    </li>
-                    <li class="ev-item">
-                        <div class="ev-date">Oct 20</div>
-                        <div class="ev-desc"><strong>Small Biz Workshop</strong>
-                            <div class="small muted">Room 4 • 14:00</div>
-                        </div>
-                    </li>
-                    <li class="ev-item">
-                        <div class="ev-date">Nov 01</div>
-                        <div class="ev-desc"><strong>Annual Gala</strong>
-                            <div class="small muted">Grand Ballroom • 19:00</div>
-                        </div>
-                    </li>
-                </ul>
-            </article>
-
-            <!-- WEATHER -->
-            <div class="weather-container">
-                <!-- Cuadro 1: Current Weather -->
-                <aside class="card weather" id="weatherNowCard" aria-labelledby="weatherTitle">
-                    <h2 id="weatherTitle">Current Weather</h2>
-                    <div id="weatherNow" class="weather-widget" role="status" aria-live="polite">
-                        <div class="weather-now">
-                            <div class="temp">—</div>
-                            <div class="meta">Cargando clima…</div>
-                        </div>
-                    </div>
-                </aside>
-            </div>
-
-            <!-- Cuadro 2: Forecast -->
-            <aside class="card forecast-card" id="forecastCard" aria-labelledby="forecastTitle">
-                <h2 id="forecastTitle">3-Day Forecast</h2>
-                <div id="forecastList" class="forecast" aria-live="polite"></div>
-            </aside>
-
-        </div>
+       
     </main>
 
-    <!-- SPOTLIGHTS -->
-    <div id="spotlightContainer" class="spot-grid"></div>
 
-    <!-- COMPANIES -->
-    <section id="companies" class="companies-section">
-        <h2>Our Partners</h2>
-        <div id="companyList" class="company-list"></div>
-    </section>
 
 
     <!-- FOOTER -->
@@ -166,4 +102,5 @@
         </div>
     </footer>
 </body>
+
 </html>

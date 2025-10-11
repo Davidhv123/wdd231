@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Lima Chamber</title>
+    <meta name="description" content="Pixel-tuned replica — palette naranja + #343434" />
+    <meta name="author" content="David Martin Huaroto Villavicencio">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Chamber commerce Lima">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/Interface.webp">
+    <meta property="og:url" content="https://davidhv123.github.io/wdd231/chamber/directory.html">
+    <meta property="og:description"
+        content="Discover the best E-Comerce to get your own computer or laptop more affordable">
+
+    <!-- font Monserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+
+    <link rel="icon" href="images/logointerface.ico">
+
+    <script src="scripts/join.js" defer></script>
+
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="site-header" role="banner">
+        <div class="header-inner">
+            <div class="brand" aria-label="Brand">
+                <div><img src="images/logo1.svg" alt="Logo" class="logo"></div>
+                <div class="brand-text">
+                    <div class="brand-name">Lima Chamber of Commerce</div>
+                    <div class="brand-sub">Connecting local business</div>
+                </div>
+            </div>
+
+            <!-- NAV (right-aligned) -->
+            <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+                <ul class="links" id="navLinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions" role="toolbar" aria-label="Header actions">
+                <button id="darkToggle" class="icon-btn" aria-pressed="false" title="Toggle dark mode">🌙</button>
+                <button id="hamburger" class="hamburger" aria-label="Open menu" aria-expanded="false"
+                    aria-controls="navLinks">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+
+
+    <!-- MAIN -->
+    <main class="join-main">
+  <section class="join-section">
+    <h1>Join the Lima Chamber of Commerce</h1>
+    <p>Become part of our business community. Complete the form below to register your organization and access exclusive membership benefits.</p>
+
+    <form id="joinForm" method="get" action="thankyou.html" class="join-form">
+      <!-- Applicant Name -->
+      <label>
+        First Name:
+        <input type="text" name="firstName" id="firstName" title="Enter your first name" autocomplete="given-name" required>
+      </label>
+
+      <!-- Applicant Last Name -->
+      <label>
+        Last Name:
+        <input type="text" name="lastName" id="lastName" title="Enter your last name" autocomplete="family-name" required>
+      </label>
+
+      <!-- Organizational Title -->
+      <label>
+        Organizational Title:
+        <input type="text" name="organizationTitle" id="organizationTitle" title="Your position or title in the organization" 
+               autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}" 
+               placeholder="e.g., Marketing Director" required>
+      </label>
+
+      <!-- Email -->
+      <label>
+        Email:
+        <input type="email" name="email" id="email" title="Enter a valid email address" 
+               autocomplete="email" placeholder="example@email.com" required>
+      </label>
+
+      <!-- Phone -->
+      <label>
+        Mobile Phone:
+        <input type="tel" name="phone" id="phone" title="Enter your mobile number" autocomplete="tel" required>
+      </label>
+
+      <!-- Organization Name -->
+      <label>
+        Company / Organization Name:
+        <input type="text" name="organization" id="organization" title="Your organization name" 
+               autocomplete="organization" required>
+      </label>
+
+      <!-- Membership Level -->
+      <fieldset class="membership-fieldset">
+        <legend>Membership Level</legend>
+        <label><input type="radio" name="membership" value="np" required> NP (Non-Profit) — Free</label>
+        <label><input type="radio" name="membership" value="bronze"> Bronze Membership</label>
+        <label><input type="radio" name="membership" value="silver"> Silver Membership</label>
+        <label><input type="radio" name="membership" value="gold"> Gold Membership</label>
+      </fieldset>
+
+      <!-- Description -->
+      <label>
+        Description:
+        <textarea name="description" id="description" title="Describe your organization" rows="5" placeholder="Tell us about your company"></textarea>
+      </label>
+
+      <!-- Hidden Timestamp -->
+      <input type="hidden" name="timestamp" id="timestamp">
+
+      <!-- Submit -->
+      <button type="submit">Submit Application</button>
+    </form>
+  </section>
+
+  <!-- Membership Cards -->
+  <aside class="membership-cards">
+    <h2>Membership Levels</h2>
+    <div class="cards-container">
+      <div class="card level-np">
+        <h3>NP Membership</h3>
+        <p>For non-profit organizations. Enjoy free access to community networking events.</p>
+        <a href="#modal-np" class="open-modal">Learn more</a>
+      </div>
+      <div class="card level-bronze">
+        <h3>Bronze Membership</h3>
+        <p>Affordable entry with access to local events and a business listing.</p>
+        <a href="#modal-bronze" class="open-modal">Learn more</a>
+      </div>
+      <div class="card level-silver">
+        <h3>Silver Membership</h3>
+        <p>Enhanced exposure, discounts, and event invitations.</p>
+        <a href="#modal-silver" class="open-modal">Learn more</a>
+      </div>
+      <div class="card level-gold">
+        <h3>Gold Membership</h3>
+        <p>Premium placement, full benefits, and exclusive advertising opportunities.</p>
+        <a href="#modal-gold" class="open-modal">Learn more</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Modal Windows -->
+  <div id="modal-np" class="modal">
+    <div class="modal-content">
+      <h3>NP (Non-Profit) Membership</h3>
+      <p>Free access to networking and community resources for non-profit organizations.</p>
+      <button class="close-modal">Close</button>
+    </div>
+  </div>
+
+  <div id="modal-bronze" class="modal">
+    <div class="modal-content">
+      <h3>Bronze Membership</h3>
+      <ul>
+        <li>Access to networking events</li>
+        <li>Business directory listing</li>
+        <li>10% discount on chamber workshops</li>
+      </ul>
+      <button class="close-modal">Close</button>
+    </div>
+  </div>
+
+  <div id="modal-silver" class="modal">
+    <div class="modal-content">
+      <h3>Silver Membership</h3>
+      <ul>
+        <li>All Bronze benefits</li>
+        <li>Promotional features in newsletters</li>
+        <li>25% event discount</li>
+      </ul>
+      <button class="close-modal">Close</button>
+    </div>
+  </div>
+
+  <div id="modal-gold" class="modal">
+    <div class="modal-content">
+      <h3>Gold Membership</h3>
+      <ul>
+        <li>All Silver benefits</li>
+        <li>Featured placement on homepage</li>
+        <li>Exclusive sponsorship opportunities</li>
+      </ul>
+      <button class="close-modal">Close</button>
+    </div>
+  </div>
+</main>
+
+
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-inner">
+            <div>
+                <strong>Lima Chamber of Commerce</strong>
+                <div class="muted">Av. Principal 123 • Lima, Perú</div>
+                <div class="muted">info@limacommerce.org</div>
+                <div class="muted">(902 908 915)</div>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/david-martin-huaroto-villavicencio-89036b2a0" target="_blank">
+                    <img src="images/linkedin.svg" alt="linkedin">
+                </a>
+                <a href="https://github.com/Davidhv123/wdd231" target="_blank">
+                    <img src="images/github.svg" alt="GitHub">
+                </a>
+                <a href="https://www.instagram.com/david_huaroto_villavicencio" target="_blank">
+                    <img src="images/instagram.svg" alt="instagram">
+                </a>
+            </div>
+            <div>
+                <div class="muted">WDD321 Class Project</div>
+                <div class="muted">David Huaroto</div>
+                <div class="muted">&copy; 2025 Lima Chamber of Commerce</div>
+                <div class="muted">WDD231 — Last update: <span id="lastMod"></span></div>
+            </div>
+
+        </div>
+    </footer>
+</body>
+
+</html>
