@@ -147,3 +147,30 @@ function showList() {
     display.classList.add("list");
     display.classList.remove("grid");
 }
+
+
+// ===================================
+// 3. LÓGICA DE Menu de hamburgesa y modo oscuro 
+// ===================================
+
+function setAriaExpanded(el, val) { 
+  if (el) el.setAttribute('aria-expanded', val ? 'true' : 'false'); 
+}
+
+const hamburger = document.getElementById('hamburger');
+const mainNav = document.getElementById('mainNav');
+const navLinksUL = document.getElementById('navLinks');
+
+if (hamburger && mainNav && navLinksUL) {
+  hamburger.addEventListener('click', () => {
+    const open = mainNav.classList.toggle('open');
+    hamburger.classList.toggle('open');
+    setAriaExpanded(hamburger, open);
+
+    if (window.innerWidth <= 768) {
+      navLinksUL.style.display = open ? 'flex' : 'none';
+    }
+
+    document.body.style.overflow = (open && window.innerWidth <= 768) ? 'hidden' : '';
+  });
+}
