@@ -1,65 +1,65 @@
- [
-    {
-      "name": "Apple",
-      "address": "One Apple Park Way, Cupertino, CA 95014, USA",
-      "phone": "+1-800-692-7753",
-      "website": "https://www.apple.com",
-      "image": "images/apple_company.webp",
-      "membership_level": 3,
-      "additional_info": "Specializes in consumer electronics and software."
-    },
-    {
-      "name": "Google",
-      "address": "1600 Amphitheatre Parkway, Mountain View, CA 94043, USA",
-      "phone": "+1-650-253-0000",
-      "website": "https://www.google.com",
-      "image": "images/google_company.webp",
-      "membership_level": 3,
-      "additional_info": "Leader in internet-related services and products."
-    },
-    {
-      "name": "Microsoft",
-      "address": "One Microsoft Way, Redmond, WA 98052, USA",
-      "phone": "+1-425-882-8080",
-      "website": "https://www.microsoft.com",
-      "image": "images/microsoft_company.webp",
-      "membership_level": 3,
-      "additional_info": "Known for Windows, Office, and Azure cloud services."
-    },
-    {
-      "name": "Amazon",
-      "address": "410 Terry Ave N, Seattle, WA 98109, USA",
-      "phone": "+1-888-280-4331",
-      "website": "https://www.amazon.com",
-      "image": "images/amazon_company.webp",
-      "membership_level": 2,
-      "additional_info": "E-commerce and cloud computing leader."
-    },
-    {
-      "name": "Meta",
-      "address": "1 Hacker Way, Menlo Park, CA 94025, USA",
-      "phone": "+1-650-543-4800",
-      "website": "https://www.meta.com",
-      "image": "images/meta_company.webp",
-      "membership_level": 2,
-      "additional_info": "Parent company of Facebook, Instagram, and WhatsApp."
-    },
-    {
-      "name": "Intel",
-      "address": "2200 Mission College Blvd, Santa Clara, CA 95054, USA",
-      "phone": "+1-408-765-8080",
-      "website": "https://www.intel.com",
-      "image": "images/intel_company.webp",
-      "membership_level": 1,
-      "additional_info": "World's largest semiconductor chip manufacturer."
-    },
-    {
-      "name": "NVIDIA",
-      "address": "2788 San Tomas Expressway, Santa Clara, CA 95051, USA",
-      "phone": "+1-408-486-2000",
-      "website": "https://www.nvidia.com",
-      "image": "images/nvidia_company.webp",
-      "membership_level": 2,
-      "additional_info": "Renowned for graphics processing units (GPUs)."
-    }
-];
+[
+  {
+    "name": "Apple",
+    "address": "One Apple Park Way, Cupertino, CA 95014, USA",
+    "phone": "+1-800-692-7753",
+    "website": "https://www.apple.com",
+    "image": "images/apple_company.webp",
+    "membership_level": 3,
+    "additional_info": "Specializes in consumer electronics and software."
+  },
+  {
+    "name": "Google",
+    "address": "1600 Amphitheatre Parkway, Mountain View, CA 94043, USA",
+    "phone": "+1-650-253-0000",
+    "website": "https://www.google.com",
+    "image": "images/google_company.webp",
+    "membership_level": 3,
+    "additional_info": "Leader in internet-related services and products."
+  },
+  {
+    "name": "Microsoft",
+    "address": "One Microsoft Way, Redmond, WA 98052, USA",
+    "phone": "+1-425-882-8080",
+    "website": "https://www.microsoft.com",
+    "image": "images/microsoft_company.webp",
+    "membership_level": 3,
+    "additional_info": "Known for Windows, Office, and Azure cloud services."
+  },
+  {
+    "name": "Amazon",
+    "address": "410 Terry Ave N, Seattle, WA 98109, USA",
+    "phone": "+1-888-280-4331",
+    "website": "https://www.amazon.com",
+    "image": "images/amazon_company.webp",
+    "membership_level": 2,
+    "additional_info": "E-commerce and cloud computing leader."
+  },
+  {
+    "name": "Meta",
+    "address": "1 Hacker Way, Menlo Park, CA 94025, USA",
+    "phone": "+1-650-543-4800",
+    "website": "https://www.meta.com",
+    "image": "images/meta_company.webp",
+    "membership_level": 2,
+    "additional_info": "Parent company of Facebook, Instagram, and WhatsApp."
+  },
+  {
+    "name": "Intel",
+    "address": "2200 Mission College Blvd, Santa Clara, CA 95054, USA",
+    "phone": "+1-408-765-8080",
+    "website": "https://www.intel.com",
+    "image": "images/intel_company.webp",
+    "membership_level": 1,
+    "additional_info": "World's largest semiconductor chip manufacturer."
+  },
+  {
+    "name": "NVIDIA",
+    "address": "2788 San Tomas Expressway, Santa Clara, CA 95051, USA",
+    "phone": "+1-408-486-2000",
+    "website": "https://www.nvidia.com",
+    "image": "images/nvidia_company.webp",
+    "membership_level": 2,
+    "additional_info": "Renowned for graphics processing units (GPUs)."
+  }
+]

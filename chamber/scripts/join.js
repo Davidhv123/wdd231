@@ -24,3 +24,7 @@
       e.target.style.display = 'none';
     }
   });
+
+
+// last modifed (time)
+if (lastMod) lastMod.textContent = document.lastModified || new Date().toLocaleDateString();
