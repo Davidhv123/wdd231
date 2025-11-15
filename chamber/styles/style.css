@@ -151,7 +151,7 @@ body.dark .site-header {
 
 .brand-name {
   font-size: 20px;
-  color: var(-brand-);
+  /* color: var(-brand-);     arreglar  */
   font-weight: 700;
   margin: 0;
   line-height: 1;
@@ -746,9 +746,8 @@ hr {
       height: auto;
       border: none;
       border-radius: 1rem;
-      justify-items: center;
 
-      &>* {
+      & > * {
         margin: 0.1rem;
         text-align: left;
       }
@@ -758,14 +757,13 @@ hr {
   .list {
     display: flex;
     flex-direction: column;
+  }
 
-
-    section {
+  .list section {
       display: grid;
       grid-template-columns: 1fr;
 
     }
-  }
 }
 
 
@@ -811,7 +809,6 @@ main {
   margin: 0 auto;
   padding: 0.5rem;
   max-width: 700px;
-  background-color: none;
   font-family: Acme, Arial, sans-serif;
 }
 
