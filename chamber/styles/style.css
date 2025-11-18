@@ -47,7 +47,7 @@ button {
   --gray: var(--ColorSecundario);
   --bg: #ddd;
   --card: #fbfbfb;
-  --muted: #6b7280; 
+  --muted: #6b7280;
   --separator: #eee;
   --link: var(--brand);
 }
@@ -734,36 +734,38 @@ hr {
 }
 
 /* media query de grid y list (directory) */
-@media(max-width:768px) {
+@media (max-width: 768px) {
   .grid {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 5px;
     justify-items: center;
-
-    section {
-      width: 2rem;
-      height: auto;
-      border: none;
-      border-radius: 1rem;
-
-      & > * {
-        margin: 0.1rem;
-        text-align: left;
-      }
-    }
   }
 
-  .list {
-    display: flex;
-    flex-direction: column;
+  /* section que está dentro de .grid */
+  .grid section {
+    width: 2rem;
+    height: auto;
+    border: none;
+    border-radius: 1rem;
   }
 
-  .list section {
-      display: grid;
-      grid-template-columns: 1fr;
+  /* todos los hijos directos de ese section */
+  .grid section>* {
+    margin: 0.1rem;
+    text-align: left;
+  }
+}
 
-    }
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.list section {
+  display: grid;
+  grid-template-columns: 1fr;
+
 }
 
 
@@ -817,11 +819,12 @@ main {
   padding: 0.5rem;
   background-color: #333;
   text-align: center;
+}
 
-  button {
-    padding: 0.5rem 1rem;
-    font-weight: 700;
-  }
+/* Aquí está el botón que antes estaba anidado */
+.menu button {
+  padding: 0.5rem 1rem;
+  font-weight: 700;
 }
 
 .hero {
@@ -832,16 +835,18 @@ main {
 .section-card {
   padding: 0.5rem;
   background-color: var(--card);
+}
 
-  a {
-    font-family: Arial, sans-serif;
-    font-size: 0.85rem;
-    color: navy;
-  }
+/* Enlaces que están directamente dentro de .section-card */
+.section-card a {
+  font-family: Arial, sans-serif;
+  font-size: 0.85rem;
+  color: navy;
+}
 
-  h3 {
-    font-size: 1.5rem;
-  }
+/* h3 que están directamente dentro de .section-card */
+.section-card h3 {
+  font-size: 1.5rem;
 }
 
 /* cartas con la class= grid (DIRECTORY)*/
@@ -850,31 +855,35 @@ main {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 5px;
   align-items: center;
+}
 
-  section {
-    width: 14rem;
-    height: 28rem;
-    border: none;
-    border-radius: 1rem;
-    justify-items: center;
+/* section dentro de .grid */
+.grid section {
+  width: 14rem;
+  height: 28rem;
+  border: none;
+  border-radius: 1rem;
+  justify-items: center;
+}
 
-    &>* {
-      margin: 0.1rem;
-      text-align: left;
-    }
-  }
+/* todos los hijos directos de ese section */
+.grid section > * {
+  margin: 0.1rem;
+  text-align: left;
+}
 
-  img {
-    width: 9rem;
-    height: 6rem;
-    border: none;
-    box-shadow: 0 0 1rem #555;
-    border-radius: 1rem;
-  }
+/* imágenes dentro de .grid (pueden estar en cualquier nivel dentro del grid) */
+.grid img {
+  width: 9rem;
+  height: 6rem;
+  border: none;
+  box-shadow: 0 0 1rem #555;
+  border-radius: 1rem;
+}
 
-  h3 {
-    padding: 0 0 1rem 0;
-  }
+/* h3 dentro de .grid */
+.grid h3 {
+  padding: 0 0 1rem 0;
 }
 
 h3 {
@@ -888,32 +897,37 @@ h3 {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
 
-  section {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    padding: 0.25rem;
-    background: #f8f9fa;
-    border-radius: 0.5rem;
+/* section dentro de .list */
+.list section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 0.25rem;
+  background: #f8f9fa;
+  border-radius: 0.5rem;
+}
 
-    & > * {
-      margin: 0 1rem;
-    }
+/* todos los hijos directos del section */
+.list section > * {
+  margin: 0 1rem;
+}
 
-    img {
-      display: none;
-    }
+/* imágenes dentro del section */
+.list section img {
+  display: none;
+}
 
-    h3 {
-      font-size: 1.7rem;
-      grid-column: 1;
-      font-weight: 600;
-    }
+/* h3 dentro del section */
+.list section h3 {
+  font-size: 1.7rem;
+  grid-column: 1;
+  font-weight: 600;
+}
 
-    &:nth-child(even) {
-      background-color: #e9ecef;
-    }
-  }
+/* filas pares del section (el section que sea hijo par dentro de .list) */
+.list section:nth-child(even) {
+  background-color: #e9ecef;
 }
 
 /* ===================================
@@ -921,22 +935,25 @@ h3 {
    =================================== */
 @media (max-width: 768px) {
   .list {
-    flex-direction: column;   /* ← Vertical en móvil */
+    flex-direction: column;
+  }
 
-    section {
-      grid-template-columns: 1fr;   /* ← 1 columna */
-      text-align: center;
-      padding: 1rem;
+  /* section dentro de .list en móvil */
+  .list section {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 1rem;
+  }
 
-      & > * {
-        margin: 0.5rem 0;
-      }
+  /* todos los hijos directos del section */
+  .list section > * {
+    margin: 0.5rem 0;
+  }
 
-      h3 {
-        font-size: 1.5rem;
-        grid-column: 1;
-      }
-    }
+  /* h3 dentro del section */
+  .list section h3 {
+    font-size: 1.5rem;
+    grid-column: 1;
   }
 }
 
