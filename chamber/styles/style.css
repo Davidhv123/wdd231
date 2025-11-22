@@ -991,7 +991,7 @@ img {
 }
 
 .join-section {
-  max-width: 700px;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -1010,7 +1010,6 @@ img {
 
 /* === FORM === */
 .join-form {
-  display: grid;
   gap: 1rem;
   background: #fff;
   padding: 2rem;
@@ -1236,6 +1235,8 @@ img {
   .membership-cards {
     order: 2;
   }
+
+  
 }
 
 /* === DARK MODE (opcional, compatible con tu toggle) === */
