@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BASE STYLE */
+
+body {
+    background: #0a192f  ;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-family: "inter", "san-serif";
+    padding: 1rem;
+}
+
+h2, h3 {
+    color: #8892b0 ;
+    font-family: "inter", "san-serif";
+    font-weight: 400;
+    padding: 1rem;
+}
+
+h3 {
+    padding: 0 0 0 2rem;
+}
+
+
+p {
+    font-family: "fira code";
+    padding: 0rem 0rem 1rem 2rem ;
+    color: #00d4aa;
+
+}
+
+/* modificar una parte de mi p (pseudo clase) */
+h2::before {
+    content: "⚙️";
+    font-size: 2rem;
+}
+
+
+/* caracteristicas de imgs */
+#mobile-version {
+    width: 20rem;
+    
+}
+
+#laptop-version {
+    width: 40rem;
+}
+
+img {
+    padding: 1rem;
+}
+
+#font-inter {
+    font-family: "inter";
+}
