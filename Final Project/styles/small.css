@@ -337,7 +337,7 @@ body {
 .card-weather {
     display: flex;
     flex-direction: column;
-    width: 270px;
+    min-width: 270px;
     height: auto;
     background: var(--text-secondary);
     border-radius: 1rem;

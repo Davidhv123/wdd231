@@ -39,4 +39,10 @@
     flex-direction: row;
     margin: 0 14rem;
   }
+
+  .weather-container {
+        width: 100%;
+        margin: 0rem;
+        padding: 0rem;
+    }
 }
