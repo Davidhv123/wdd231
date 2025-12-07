@@ -1,0 +1,419 @@
+/* Color website */
+
+:root {
+    --primary: #0a192f;
+    /* Fondo principal (casi negro azulado) */
+    --secondary: #112240;
+    /* Fondos de tarjetas y secciones */
+    --text-primary: #ccd6f6;
+    /* Títulos y texto principal */
+    --text-secondary: #8892b0;
+    /* Párrafos, subtítulos, texto secundario */
+    --accent: #64ffda;
+    /* Botones, enlaces, detalles que destacan */
+    --accent-hover: #00d4aa;
+    /* Hover del accent (más brillante) */
+
+    /* Bonus: colores extra que combinan perfecto con esta paleta */
+    --white: #ffffff;
+    --border: #233554;
+}
+
+/* ---------------------------------------------------------
+---------------------->// ABOUT PAGE //<--------------------
+------------------------------------------------------------*/
+
+/* ALL */
+
+body {
+    background: var(--primary);
+    font-family: "inter", "serif";
+}
+
+
+/*---------- HEADER ----------*/
+
+/* ---nav---*/
+.navbar {
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 100%;
+    position: sticky;
+    background: transparent;
+    /*Cambiar esto */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    padding: 1rem;
+
+
+}
+
+.navbar-logo {
+    width: 1.7rem;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.navbar-container .navbar-menu {
+    font-family: "fira code";
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    list-style: none;
+    gap: 1.0rem;
+    position: absolute;
+    height: 100vh;
+    width: 12rem;
+    top: -1rem;
+    right: 0;
+    padding: 7rem 1rem 0 0;
+    gap: 1.5rem;
+    background: var(--secondary);
+
+    /* movimiento para la derecha suave */
+    transform: translateX(100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.6s cubic-bezier(0.65, 0, 0.35, 1),
+        opacity 0.6s cubic-bezier(0.65, 0, 0.35, 1),
+        visibility 0.6s ease;
+
+}
+
+/* aparecer y desaparecer menu */
+.navbar-container .navbar-menu.active {
+    display: flex;
+
+    /* aparecer movimiento para la derecha suave */
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.navbar-container .navbar-menu li {
+    padding: 0.5rem 0.2rem;
+
+}
+
+.navbar-container .navbar-menu li a {
+    text-decoration: none;
+    color: var(--text-primary);
+    padding: 3px 20px;
+    transition: all 0.3s ease;
+
+}
+
+.navbar-container .navbar-menu li a:hover {
+    color: var(--accent-hover);
+}
+
+/* nav add pseudo element (1, 2, 3, 4) */
+.navbar-menu {
+    counter-reset: menu-counter;
+}
+
+.navbar-container .navbar-menu li a::before {
+    content: counter(menu-counter) ". ";
+    counter-increment: menu-counter;
+    color: var(--accent-hover);
+    font-family: "fira code";
+}
+
+/* create a button hamburger */
+
+.navbar-toggle {
+    background: transparent;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+
+    display: block;
+    z-index: 999;
+}
+
+/* movimiento del boton a X */
+.navbar-toggle.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.navbar-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar-toggle.active .bar.bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background: #ffffff;
+    transition: all 0.3s ease-in-out;
+}
+
+/* nav bar - inteligente */
+.header {
+    position: fixed;
+    /* fixed en vez de sticky */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    background: transparent;
+    backdrop-filter: blur(6px);
+
+}
+
+.header.hidden {
+    transform: translateY(-100%);
+    /* se oculta hacia arriba */
+}
+
+.header.visible {
+    transform: translateY(0);
+    /* vuelve a aparecer suave */
+}
+
+/* ----------HERO--------- */
+.hero-img {
+    width: 100%;
+}
+
+/*---------- MAIN ----------*/
+body {
+    /*solo porciaca */
+    margin-top: 8rem;
+}
+
+/* Seccion 1 */
+.intro {
+    font-family: "fira code";
+    color: var(--accent);
+    font-weight: 500;
+    padding: 0 1.5rem;
+}
+
+.my-name {
+    font-family: "inter";
+    color: var(--text-secondary);
+    padding: 0 1.5rem;
+    font-size: 35px;
+}
+
+.my-first-name {
+    color: var(--text-primary);
+}
+
+.description {
+    font-family: "inter";
+    color: var(--text-secondary);
+    padding: 0 1.5rem;
+}
+
+/* afecta a todos los botones */
+.button {
+    font-family: "fira code";
+    font-size: 15px;
+    border-radius: 0.5rem;
+    border-color: var(--accent);
+    height: auto;
+    margin: 2rem 1.5rem;
+    padding: 1rem 2rem;
+    background: transparent;
+    cursor: pointer;
+    color: var(--accent);
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    transform: translate(-5px, -5px);
+    box-shadow: 4px 4px 0 0 var(--accent);
+
+}
+
+/* Seccion 2 */
+
+.subtitle {
+    margin: 1.5rem;
+    color: var(--text-primary);
+    margin-top: 10rem;
+    margin-bottom: 3rem;
+}
+
+.subtitle::before {
+    content: "01. ";
+    color: var(--accent);
+    font-family: "fira code";
+    font-size: 70%;
+    font-weight: 400;
+}
+
+.subtitle::after {
+    content: "";
+    display: block;
+    position: relative;
+    top: -14px;
+    left: 10rem;
+    background: var(--text-secondary);
+    height: 1px;
+
+    margin-left: 10px;
+    width: 110px;
+}
+
+.my-skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 280px;
+    font-size: 13px;
+    margin: 1rem 0;
+}
+
+.my-skills li {
+    list-style: none;
+    color: var(--accent);
+}
+
+.my-skills li::before {
+    content: "►";
+    color: var(--white);
+}
+
+/* photo */
+
+.photo-contenedor {
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0;
+}
+
+.profile-photo {
+    width: 200px;
+    height: auto;
+    transition: all 0.3s ease;
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    border-radius: .7rem;
+    filter: grayscale(100%) brightness(0.9);
+    transition: filter 0.2s ease;
+
+}
+
+.profile-photo:hover {
+    transform: scale(1.05);
+}
+
+.profile-photo:hover img {
+    filter: grayscale(0%) brightness(1);
+}
+
+/* weather and forecast*/
+
+.weather-container {
+    display: flex;
+    justify-content: center;
+    font-family: "inter";
+}
+
+.card-weather {
+    display: flex;
+    flex-direction: column;
+    width: 270px;
+    height: auto;
+    background: var(--text-secondary);
+    border-radius: 1rem;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.card-weather h3 {
+    color: var(--primary);
+    font-size: 1.3rem;
+}
+
+.weather-now {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    text-align: left;
+    padding: 1rem;
+}
+
+.temp {
+    font-size: 40px;
+    font-weight: 500;
+    padding: 15px;
+}
+
+.meta,
+.small.muted {
+    margin: 5px;
+    font-family: "fira code";
+    color: var(--primary);
+}
+
+
+
+/*---------- FOOTER ----------*/
+
+.footer-container {
+    font-family: "fira code";
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+.footer-container .footer-info {
+    text-align: center;
+    color: var(--text-primary);
+    padding: 0 1.2rem;
+}
+
+.muted {
+    margin: 1rem 0;
+}
+
+/* icons */
+.social-icons {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem;
+
+}
+
+.social-icon {
+    color: var(--text-primary);
+    width: 3rem;
+    height: auto;
+    cursor: pointer;
+    transform: none;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    color: var(--accent-hover);
+    transform: scale(1.2);
+}

@@ -1,0 +1,24 @@
+/* Color website */
+
+:root {
+  --primary:        #0a192f;  /* Fondo principal (casi negro azulado) */
+  --secondary:      #112240;  /* Fondos de tarjetas y secciones */
+  --text-primary:   #ccd6f6;  /* Títulos y texto principal */
+  --text-secondary: #8892b0;  /* Párrafos, subtítulos, texto secundario */
+  --accent:         #64ffda;  /* Botones, enlaces, detalles que destacan */
+  --accent-hover:   #00d4aa;  /* Hover del accent (más brillante) */
+  
+  /* Bonus: colores extra que combinan perfecto con esta paleta */
+  --white:          #ffffff;
+  --border:         #233554;
+}
+
+/* ---------------------------------------------------------
+---------------------->// ABOUT PAGE //<--------------------
+------------------------------------------------------------*/
+
+/*---------- HEADER */
+
+@media only screen and (min-width: 64rem) {
+    .fff
+}
