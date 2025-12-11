@@ -443,6 +443,154 @@ body {
     transform: scale(1.2);
 }
 
+/* modal */
+/* ====================== MODAL PRECIOS – ESTILO TU WEB ====================== */
+#modalPrecios {
+  background: var(--secondary);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 0;
+  max-width: 1000px;
+  width: 95%;
+  color: var(--text-primary);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+}
+
+#modalPrecios::backdrop {
+  background: rgba(10, 25, 47, 0.95);
+}
+
+.modal-inner {
+  padding: 3rem 2rem 2.5rem;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+  color: var(--accent);
+  opacity: 1;
+  transform: rotate(90deg);
+}
+
+.modal-title {
+  font-family: "inter", sans-serif;
+  font-size: 2.6rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--text-primary);
+}
+
+.paquetes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.paquete {
+  background: rgba(17, 34, 64, 0.5);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 2rem 1.8rem;
+  width: 230px;
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.paquete:hover {
+  transform: translateY(-12px);
+  border-color: var(--accent);
+  box-shadow: 0 15px 40px rgba(100, 255, 218, 0.15);
+}
+
+.destacado {
+  border-color: var(--accent);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(100, 255, 218, 0.2);
+}
+
+.badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent);
+  color: var(--primary);
+  padding: 6px 20px;
+  border-radius: 30px;
+  font-family: "fira code";
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.paquete h3 {
+  font-family: "inter";
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.precio {
+  font-family: "inter";
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--accent);
+  text-align: center;
+  margin: 1rem 0 1.5rem;
+}
+
+.paquete ul {
+  list-style: none;
+  text-align: left;
+  font-family: "inter";
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+.paquete ul li::before {
+  content: "► ";
+  color: var(--accent);
+}
+
+.cta-final {
+  text-align: center;
+  font-family: "inter";
+  color: var(--text-secondary);
+  line-height: 1.8;
+  padding: 2rem;
+  background: rgba(17, 34, 64, 0.4);
+  border-radius: 1rem;
+  border: 1px solid var(--border);
+}
+
+.cta-final a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.cta-final a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
 
 /* ---------------------------------------------------------
 ---------------------->// EXPERIENCE PAGE //<--------------------

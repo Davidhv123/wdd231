@@ -156,6 +156,20 @@ loadWeather();
 })();
 
 
+// modal
+
+document.getElementById('btnPrecios').onclick = () => {
+  document.getElementById('modalPrecios').showModal();
+};
+
+document.getElementById('cerrarModal').onclick = () => {
+  document.getElementById('modalPrecios').close();
+};
+
+// Cerrar clicando fuera (opcional pero cómodo)
+document.getElementById('modalPrecios').addEventListener('click', (e) => {
+  if (e.target === e.currentTarget) e.currentTarget.close();
+});
 
 // ------------------------------------------------------
 // ---------------------- CONTACT PAGE --------------------

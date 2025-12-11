@@ -64,7 +64,7 @@ function displayItems(projects) {
     thephoto.classList = "web-photos"
     thephoto.src = `images/${x.photo_link}`
     thephoto.alt = x.titulo
-    thephoto.loading = "lazy"
+    thephoto.fetchpriority="high"
     thecard.appendChild(thephoto)
 
     // build the year element
