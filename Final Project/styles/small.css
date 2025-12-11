@@ -248,10 +248,11 @@ body {
 
 .button a {
     text-decoration: none;
+    font-weight: 600;
 }
 
 .button a:visited {
-    color: #ffffff;
+    color: var(--text-primary);
 }
 
 .button:hover {
