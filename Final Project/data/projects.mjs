@@ -1,107 +1,107 @@
 export const projects = [
   {
-    "titulo": "Calculadora Básica",
-    "description": "Calculadora simple con operaciones básicas hecha sin frameworks.",
+    "titulo": "Basic Calculator",
+    "description": "Fully functional calculator supporting addition, subtraction, multiplication, division and decimal operations. Built with pure HTML, CSS and vanilla JavaScript – no frameworks or libraries used.",
     "photo_link": "web1.webp",
-    "monthYear": "Marzo 2024",
+    "monthYear": "March 2024",
     "herramienta": "HTML + CSS + JavaScript"
   },
   {
-    "titulo": "Lista de Tareas (To-Do List)",
-    "description": "App para agregar, marcar y borrar tareas con guardado automático.",
+    "titulo": "To-Do List",
+    "description": "Interactive task manager that allows users to add, complete, edit and delete tasks. All data persists between sessions thanks to localStorage implementation and clean responsive design.",
     "photo_link": "web2.webp",
-    "monthYear": "Abril 2024",
+    "monthYear": "April 2024",
     "herramienta": "HTML + CSS + JavaScript"
   },
   {
-    "titulo": "Generador de Contraseñas Seguras",
-    "description": "Script que genera contraseñas aleatorias de 8-20 caracteres.",
+    "titulo": "Password Generator",
+    "description": "Python command-line tool that generates highly secure random passwords (8–20 characters) including uppercase, lowercase, numbers and special symbols with customizable options.",
     "photo_link": "web3.webp",
-    "monthYear": "Mayo 2024",
+    "monthYear": "May 2024",
     "herramienta": "Python"
   },
   {
-    "titulo": "Reloj Digital Animado",
-    "description": "Reloj en tiempo real con diseño moderno y animaciones suaves.",
+    "titulo": "Digital Clock",
+    "description": "Elegant real-time digital clock featuring smooth CSS gradient background transitions, glassmorphism effect and live date/time updates every second with modern aesthetics.",
     "photo_link": "web4.webp",
-    "monthYear": "Junio 2024",
+    "monthYear": "June 2024",
     "herramienta": "HTML + CSS"
   },
   {
-    "titulo": "Portafolio Personal v1",
-    "description": "Mi primera página web personal 100% estática.",
+    "titulo": "First Portfolio",
+    "description": "My first complete personal portfolio website built entirely from scratch using only HTML and CSS. Fully responsive layout with smooth navigation and project showcase section.",
     "photo_link": "web5.webp",
-    "monthYear": "Julio 2024",
+    "monthYear": "July 2024",
     "herramienta": "HTML + CSS"
   },
   {
-    "titulo": "Adivina el Número",
-    "description": "Juego clásico donde la computadora adivina tu número en pocos intentos.",
+    "titulo": "Guess the Number",
+    "description": "Classic number-guessing game implemented in Python using binary search algorithm. The computer guesses your secret number in the minimum possible attempts with interactive feedback.",
     "photo_link": "web6.webp",
-    "monthYear": "Agosto 2024",
+    "monthYear": "August 2024",
     "herramienta": "Python"
   },
   {
-    "titulo": "Tarjetas con Efecto Hover",
-    "description": "Galería de tarjetas con efectos 3D al pasar el mouse.",
+    "titulo": "Hover Cards",
+    "description": "Beautiful responsive card gallery showcasing advanced CSS hover effects including 3D tilt, depth shadows, scale transitions and glassmorphism style – all with pure CSS.",
     "photo_link": "web7.webp",
-    "monthYear": "Septiembre 2024",
+    "monthYear": "September 2024",
     "herramienta": "HTML + CSS"
   },
   {
-    "titulo": "Mini Video Promo Personal",
-    "description": "Video de presentación de 30 segundos con texto y música.",
+    "titulo": "Promo Video",
+    "description": "Professional 30-second self-introduction video edited in Adobe Premiere Pro featuring cinematic transitions, animated text overlays, color grading and royalty-free background music.",
     "photo_link": "web8.webp",
-    "monthYear": "Octubre 2024",
+    "monthYear": "October 2024",
     "herramienta": "Adobe Premiere Pro"
   },
   {
-    "titulo": "Banner Animado para Redes",
-    "description": "Banner promocional con capas y animación exportado como GIF.",
+    "titulo": "Animated Banner",
+    "description": "Eye-catching animated banner designed for social media profiles using Photoshop timeline. Includes multiple layers, frame-by-frame animation and final export as optimized GIF.",
     "photo_link": "web9.webp",
-    "monthYear": "Noviembre 2024",
+    "monthYear": "November 2024",
     "herramienta": "Adobe Photoshop"
   },
   {
-    "titulo": "Contador de Visitas Simple",
-    "description": "Contador que guarda las visitas usando localStorage.",
+    "titulo": "Visit Counter",
+    "description": "Lightweight yet elegant visitor counter that tracks and displays total page visits using browser localStorage. Works offline, no backend required, and features smooth animation.",
     "photo_link": "web10.webp",
-    "monthYear": "Diciembre 2024",
+    "monthYear": "December 2024",
     "herramienta": "HTML + JavaScript"
   },
   {
-    "titulo": "Conversor de Unidades",
-    "description": "Convierte temperatura, longitud y peso con interfaz básica.",
+    "titulo": "Unit Converter",
+    "description": "Multi-purpose conversion tool built in Python that handles temperature (Celsius/Fahrenheit), length, weight, volume and speed with a clean command-line interface and accurate results.",
     "photo_link": "web11.webp",
-    "monthYear": "Enero 2025",
+    "monthYear": "January 2025",
     "herramienta": "Python"
   },
   {
-    "titulo": "Formulario con Validación en Vivo",
-    "description": "Formulario de contacto que valida email, teléfono y mensaje.",
+    "titulo": "Contact Form",
+    "description": "Modern contact form with real-time client-side validation for name, email, phone and message fields. Includes visual feedback, error messages and success redirection using URLSearchParams.",
     "photo_link": "web12.webp",
-    "monthYear": "Febrero 2025",
+    "monthYear": "February 2025",
     "herramienta": "HTML + CSS + JavaScript"
   },
   {
-    "titulo": "Thumbnail Profesional para YouTube",
-    "description": "Miniatura clickbait pero elegante para videos de tecnología.",
+    "titulo": "YouTube Thumbnail",
+    "description": "High-converting YouTube thumbnail designed in Photoshop following 2025 trends: bold typography, contrasting colors, facial close-up and visual hooks proven to increase click-through rate.",
     "photo_link": "web13.webp",
-    "monthYear": "Marzo 2025",
+    "monthYear": "March 2025",
     "herramienta": "Adobe Photoshop"
   },
   {
-    "titulo": "Reproductor de Música Minimalista",
-    "description": "Reproduce canciones locales con controles play/pause y barra de progreso.",
+    "titulo": "Music Player",
+    "description": "Clean and elegant audio player for local music files featuring play/pause controls, progress bar, volume slider, track info display and beautiful minimalist dark-mode interface.",
     "photo_link": "web14.webp",
-    "monthYear": "Abril 2025",
+    "monthYear": "April 2025",
     "herramienta": "HTML + CSS + JavaScript"
   },
   {
-    "titulo": "Reel de Proyectos 2025",
-    "description": "Compilación de 60 segundos mostrando todos mis proyectos del año.",
+    "titulo": "2025 Reel",
+    "description": "Dynamic one-minute video reel edited in Premiere Pro showcasing all 15 projects completed throughout the year with smooth transitions, text animations, music sync and cinematic color grading.",
     "photo_link": "web15.webp",
-    "monthYear": "Mayo 2025",
+    "monthYear": "May 2025",
     "herramienta": "Adobe Premiere Pro"
   }
 ]

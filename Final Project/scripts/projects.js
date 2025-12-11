@@ -33,7 +33,7 @@ window.addEventListener('scroll', () => {
 });
 
 // ------------------------------------------------------
-// ---------------------- PROJECTS PAGE --------------------
+// ---------------------- PROJECTS PAGE -----------------
 // ------------------------------------------------------
 import { projects } from "../data/projects.mjs";
 console.log(projects)
@@ -64,6 +64,7 @@ function displayItems(projects) {
     thephoto.classList = "web-photos"
     thephoto.src = `images/${x.photo_link}`
     thephoto.alt = x.titulo
+    thephoto.loading = "lazy"
     thecard.appendChild(thephoto)
 
     // build the year element
