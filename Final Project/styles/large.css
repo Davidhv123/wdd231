@@ -101,9 +101,4 @@
   .card.visible {
     width: 60rem;
   }
-
-  .card:hover {
-    background: var(--border);
-    transform: scale(1.01);
-  }
 }
