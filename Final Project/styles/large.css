@@ -101,14 +101,9 @@
   .card.visible {
     width: 60rem;
   }
+
   .card:hover {
     background: var(--border);
-    border-radius: 2rem;
-    padding: 1rem;
-    margin: 4rem 1rem;
-
     transform: scale(1.01);
+  }
 }
-}
-
-
