@@ -555,31 +555,40 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height: auto;
+    width: auto;
 }
-
+/* card experience */
 .cards-experiences {
     display: flex;
     flex-direction: column;
-    background: var(--border);
+    background: var(--primary);
     border-radius: 1rem;
-    margin: 1rem;
+    margin: 2rem 1rem;
     padding: 1rem;
-    align-items: center;
+    transition: all 0.2s ease-in-out;
+}
+.cards-experiences:hover {
+    background-color: #112441;
+    box-shadow: 2px 2px 20px #071324;
+    transform: scale(1.01);
+    border-top: 2px solid #1e3456;
 }
 
 .web-photos {
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     width: 200px;
 }
 
-/* card experience */
 .title-xp {
     color: var(--white);
-    font-size: 25px;
+    font-size: 23px;
+    margin: -5px 0;
 }
 
 .desc-xp {
     color: var(--text-primary);
+    font-size: 14px;
 }
 
 .date-xp {
@@ -587,8 +596,14 @@ body {
 }
 
 .tool-xp {
-    background-color: rgba(34, 211, 238, 0.1);
-    padding: 10px;
-    border-radius: 1rem;
+    padding: 7px;
+    border-radius: 0.5rem;
+    color: var(--accent);
+    margin: -5px 0;
+}
+
+.tool-xp::before {
+    content: "► ";
     color: var(--accent);
 }
+

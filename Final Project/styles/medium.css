@@ -150,4 +150,20 @@
         height: auto;
     }
 
+    /* ---------------------------------------------------------
+---------------------->// projets PAGE //<--------------------
+------------------------------------------------------------*/
+
+    #my-projects {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .cards-experiences {
+        width: 200px;
+    }
+
 }

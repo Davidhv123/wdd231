@@ -107,9 +107,6 @@ loadWeather();
 // ------------------------------------------------------
 
 
-
-// ----------------------------- otra locuras
-
 // Función autoejecutable asíncrona
 (async () => {
   const loadingEl = document.getElementById('loading');

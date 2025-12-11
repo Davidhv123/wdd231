@@ -47,13 +47,6 @@ function displayItems(projects) {
     const thecard = document.createElement("div")
     thecard.classList = "cards-experiences"
 
-    // build the photo element
-    const thephoto = document.createElement("img")
-    thephoto.classList = "web-photos"
-    thephoto.src = `images/${x.photo_link}`
-    thephoto.alt = x.titulo
-    thecard.appendChild(thephoto)
-
     // build the title element
     const thetitle = document.createElement("h3")
     thetitle.classList = "title-xp"
@@ -65,6 +58,13 @@ function displayItems(projects) {
     thedesc.classList = "desc-xp"
     thedesc.innerText = x.description
     thecard.appendChild(thedesc)
+
+    // build the photo element
+    const thephoto = document.createElement("img")
+    thephoto.classList = "web-photos"
+    thephoto.src = `images/${x.photo_link}`
+    thephoto.alt = x.titulo
+    thecard.appendChild(thephoto)
 
     // build the year element
     const thedate = document.createElement("p")
