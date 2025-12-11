@@ -12,8 +12,8 @@ const navbarToggle = document.querySelector(".navbar-toggle");
 const navbarMenu = document.querySelector(".navbar-menu");
 
 navbarToggle.addEventListener('click', () => {
-    navbarToggle.classList.toggle('active');
-    navbarMenu.classList.toggle('active');
+  navbarToggle.classList.toggle('active');
+  navbarMenu.classList.toggle('active');
 })
 
 // nav bar desaparece y aparece con un scroll arriba
@@ -21,20 +21,20 @@ let lastScrollY = 0;
 const header = document.querySelector('.header');
 
 window.addEventListener('scroll', () => {
-    const currentScrollY = window.scrollY;
+  const currentScrollY = window.scrollY;
 
-    // Si bajo → ocultar
-    if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        header.classList.add('hidden');
-        header.classList.remove('visible');
-    }
-    // Si subo (aunque sea un poquito) → mostrar
-    else if (currentScrollY < lastScrollY) {
-        header.classList.remove('hidden');
-        header.classList.add('visible');
-    }
+  // Si bajo → ocultar
+  if (currentScrollY > lastScrollY && currentScrollY > 100) {
+    header.classList.add('hidden');
+    header.classList.remove('visible');
+  }
+  // Si subo (aunque sea un poquito) → mostrar
+  else if (currentScrollY < lastScrollY) {
+    header.classList.remove('hidden');
+    header.classList.add('visible');
+  }
 
-    lastScrollY = currentScrollY;
+  lastScrollY = currentScrollY;
 });
 
 // WEATHER 
@@ -102,3 +102,58 @@ async function loadWeather() {
 
 loadWeather();
 
+// ------------------------------------------------------
+// ---------------------- EXPERIENCE PAGE --------------------
+// ------------------------------------------------------
+
+
+
+// ----------------------------- otra locuras
+
+// Función autoejecutable asíncrona
+(async () => {
+  const loadingEl = document.getElementById('loading');
+  const errorEl = document.getElementById('error');
+  const container = document.getElementById('experiencias');
+
+  try {
+    // 1. Fetch API + async/await
+    const response = await fetch('data/experiences.json');
+
+    // 2. Verificamos si la respuesta es correcta
+    if (!response.ok) {
+      throw new Error(`Error ${response.status}: ${response.statusText}`);
+    }
+
+    // 3. Parseamos el JSON
+    const experiences = await response.json();
+
+    // Quitamos el mensaje de carga
+    loadingEl.style.display = 'none';
+
+    // 4. Recorremos y creamos el HTML dinámicamente
+    experiences.forEach((exp, index) => {
+      const tagsHTML = exp.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
+
+      const cardHTML = `
+    <div class="card" style="transition-delay: ${index * 150}ms">
+      <div class="dates">${exp.dates}</div>
+      <div class="content">
+        <h3 class="title">${exp.title}</h3>
+        <p class="desc">${exp.description}</p>
+        <div class="tags">${tagsHTML}</div>
+      </div>
+    </div>
+  `;
+
+      container.insertAdjacentHTML('beforeend', cardHTML);
+    });
+
+  } catch (err) {
+    // 5. Manejo robusto de errores (try...catch)
+    loadingEl.style.display = 'none';
+    errorEl.style.display = 'block';
+    errorEl.textContent = `No se pudo cargar la experiencia: ${err.message}. Verifica que el archivo experiencia.json esté en la misma carpeta.`;
+    console.error('Error al cargar el JSON:', err);
+  }
+})();

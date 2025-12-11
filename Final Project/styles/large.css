@@ -24,25 +24,91 @@
 ------------------------------------------------------------*/
 
 /*---------- HEADER */
-
+/* 1024pixles */
 @media only screen and (min-width: 64rem) {
+
+  .main {
+    justify-content: center;
+  }
 
   /* section 1 */
   .section-1 {
-    margin: 0 14rem;
+    margin: auto;
     margin-bottom: 10rem;
+  }
+
+  .my-name {
+    font-size: 80px;
+  }
+
+  .description {
+    width: 500px;
   }
 
   /* section 2 */
   .section-2 {
     display: flex;
     flex-direction: row;
-    margin: 0 14rem;
+    margin: auto;
   }
 
+  .subtitle::after {
+    width: auto;
+  }
+
+
   .weather-container {
-        width: 100%;
-        margin: 0rem;
-        padding: 0rem;
-    }
+    width: 100%;
+    margin: 0rem;
+    padding: 0rem;
+  }
+
+
+  /* ---------------------------------------------------------
+---------------------->// EXPERIENCE PAGE //<--------------------
+------------------------------------------------------------*/
+  /* SECTION 1 */
+
+  .section-3 {
+    position: sticky;
+    top: 130px;
+    height: fit-content;
+  }
+
+  .section-4 {
+    height: auto;
+  }
+
+  .description.second {
+    margin-bottom: 5rem;
+  }
+
+  .my-name-2 {
+    font-size: 50px;
+  }
+
+  .role-1 {
+    font-size: 30px;
+  }
+
+  .main-1 {
+    display: flex;
+    flex-direction: row;
+  }
+
+  /* cards */
+
+  .card.visible {
+    width: 60rem;
+  }
+  .card:hover {
+    background: var(--border);
+    border-radius: 2rem;
+    padding: 1rem;
+    margin: 4rem 1rem;
+
+    transform: scale(1.01);
 }
+}
+
+

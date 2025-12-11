@@ -197,10 +197,15 @@ body {
     margin-top: 8rem;
 }
 
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
 /* Seccion 1 */
 
 .section-1{
-    margin-bottom: 10rem;
+    margin-bottom: 1rem;
 }
 .intro {
     font-family: "fira code";
@@ -249,7 +254,16 @@ body {
 
 /* Seccion 2 */
 
+.section-2 {
+    display: flex;
+    flex-direction: column;
+  }
+
 .subtitle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     margin: 1.5rem;
     color: var(--text-primary);
     margin-bottom: 3rem;
@@ -261,19 +275,20 @@ body {
     font-family: "fira code";
     font-size: 70%;
     font-weight: 400;
+
+    position: relative;
+    top: 3px;
+    left: -3px;
 }
 
 .subtitle::after {
     content: "";
-    display: block;
+    flex: 1;
     position: relative;
-    top: -14px;
-    left: 10rem;
     background: var(--text-secondary);
     height: 1px;
 
     margin-left: 10px;
-    width: 110px;
 }
 
 .my-skills {
@@ -299,18 +314,15 @@ body {
 .photo-contenedor {
     display: flex;
     justify-content: center;
-    margin: 3rem 1rem;
 }
 
 .profile-photo {
-    width: 200px;
     height: auto;
     transition: all 0.3s ease;
 }
 
 .profile-photo img {
-    width: 100%;
-    height: 100%;
+    width: 230px;
     border-radius: .7rem;
     filter: grayscale(100%) brightness(0.9);
     transition: filter 0.2s ease;
@@ -331,13 +343,12 @@ body {
     display: flex;
     justify-content: center;
     font-family: "inter";
-    margin: 1rem 2rem;
 }
 
 .card-weather {
     display: flex;
     flex-direction: column;
-    min-width: 270px;
+    width: 230px;
     height: auto;
     background: var(--text-secondary);
     border-radius: 1rem;
@@ -348,6 +359,8 @@ body {
 .card-weather h3 {
     color: var(--primary);
     font-size: 1.3rem;
+    padding: 1rem 1rem 0 1rem;
+    margin-bottom: 0;
 }
 
 .weather-now {
@@ -419,4 +432,114 @@ body {
 .social-icon:hover {
     color: var(--accent-hover);
     transform: scale(1.2);
+}
+
+
+/* ---------------------------------------------------------
+---------------------->// EXPERIENCE PAGE //<--------------------
+------------------------------------------------------------*/
+
+/* SECTION 1 */
+.subtitle-2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 1.5rem;
+    color: var(--text-primary);
+    margin-bottom: 3rem;
+    font-size: 20px;
+}
+
+.subtitle-2::before {
+    content: "02. ";
+    color: var(--accent);
+    font-family: "fira code";
+    font-size: 70%;
+    font-weight: 400;
+
+    position: relative;
+    top: 3px;
+    left: -3px;
+}
+
+.subtitle-2::after {
+    content: "";
+    flex: 1;
+    position: relative;
+    background: var(--text-secondary);
+    height: 1px;
+
+    margin-left: 10px;
+    width: 50px;
+}
+
+.my-name-2 {
+    color: var(--text-primary);
+    margin-left: 1.5rem;
+    font-size: 35px;
+    margin-bottom: -20px;
+}
+
+.role-1 {
+    color: var(--text-primary);
+    font-size: 20px;
+    margin-left: 1.5rem;
+}
+
+.description.second {
+    margin-bottom: 0;
+}
+
+/* cards */
+.card {
+    background: transparent;
+    width: auto;
+    min-height: auto; /* vamos  aver esto */
+    border: 0 solid var(--border);
+    border-radius: 2rem;
+    padding: 1rem;
+    margin: 4rem 1rem;
+
+    transform: scale(1);
+    transition: all  0.2s ease;
+    cursor: pointer;
+
+    
+}
+
+.dates {
+    color: var(--text-secondary);
+}
+
+.title {
+    color: var(--text-primary);
+}
+
+.desc {
+    color: var(--text-secondary);
+}
+
+.tags {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.tag {
+    border-radius: 2rem;
+    background: rgba(34, 211, 238, 0.1);
+    padding: .5rem;
+    color: var(--accent);
+    margin: 0.5rem;
+}
+
+.main-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section-4 {
+    min-height: 1000px;
+    width: auto;
 }

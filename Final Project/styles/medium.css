@@ -26,6 +26,7 @@
 @media only screen and (min-width: 38rem) {
 
     /*---------- HEADER --------*/
+    /* 608pixeles */
     /* nav bar*/
     .navbar {
         backdrop-filter: none;
@@ -75,7 +76,7 @@
     /* section 1 */
 
     .section-1 {
-        margin: 0 5rem;
+        margin: 0 1rem;
         margin-bottom: 10rem;
     }
 
@@ -84,14 +85,14 @@
     }
 
     .my-name {
-        font-size: 70px;
-        margin: 1rem 0;
+        font-size: 50px;
+        margin: 1rem auto;
     }
 
     .description {
         font-size: 18px;
-        margin: 2rem 0rem;
-        width: 100%;
+        margin: 2rem 0;
+        width: 85%;
     }
 
     .button {
@@ -109,7 +110,12 @@
     .section-2 {
         display: grid;
         grid-template-columns: 50% 50%;
-        margin: 0 5rem;
+        gap: 1rem;
+        margin: 0 1rem;
+    }
+
+    .subtitle::after {
+        width: auto;
     }
 
     .my-skills {
@@ -119,15 +125,29 @@
     }
 
     .profile-photo {
-        width: 270px;
-        height: auto;
         transition: all 0.3s ease;
     }
 
-    .weather-container {
-        width: 80%;
-        margin: 2rem;
-        padding: 3rem;
+    .profile-photo img {
+        width: 250px;
+    }
+
+    .photo-contenedor {
+        margin-top: 5.4rem;
+    }
+
+    .card-weather {
+        width: 250px;
+        height: 370px;
+    }
+
+
+    /* ---------------------------------------------------------
+---------------------->// EXPERIENCE PAGE //<--------------------
+------------------------------------------------------------*/
+
+    .section-4 {
+        height: auto;
     }
 
 }
