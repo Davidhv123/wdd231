@@ -551,3 +551,44 @@ body {
 /* ---------------------------------------------------------
 ---------------------->// Projects PAGE //<--------------------
 ------------------------------------------------------------*/
+#my-projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cards-experiences {
+    display: flex;
+    flex-direction: column;
+    background: var(--border);
+    border-radius: 1rem;
+    margin: 1rem;
+    padding: 1rem;
+    align-items: center;
+}
+
+.web-photos {
+    border-radius: 1rem;
+    width: 200px;
+}
+
+/* card experience */
+.title-xp {
+    color: var(--white);
+    font-size: 25px;
+}
+
+.desc-xp {
+    color: var(--text-primary);
+}
+
+.date-xp {
+    color: var(--text-primary);
+}
+
+.tool-xp {
+    background-color: rgba(34, 211, 238, 0.1);
+    padding: 10px;
+    border-radius: 1rem;
+    color: var(--accent);
+}
